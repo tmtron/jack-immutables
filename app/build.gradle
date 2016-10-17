@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 
 def AndroidAnnotationsVersion = '4.1.0'
-def ImmutablesVersion = '2.3.5'
 
 android {
     compileSdkVersion 24
@@ -37,10 +36,6 @@ dependencies {
     annotationProcessor "org.androidannotations:androidannotations:$AndroidAnnotationsVersion"
     compile "org.androidannotations:androidannotations-api:$AndroidAnnotationsVersion"
 
-    // see http://immutables.github.io/getstarted.html#configuration-for-android
-    annotationProcessor "org.immutables:value:$ImmutablesVersion"
-    provided "org.immutables:value:$ImmutablesVersion"
-    provided "org.immutables:builder:$ImmutablesVersion"
     // immutables uses javax.annotation.Generated (in the generated java files)
     provided 'javax.annotation:jsr250-api:1.0'
 }
