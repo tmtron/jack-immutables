@@ -14,7 +14,8 @@ there are 3 branches:
  The problem can be seen in `master` branch:
   * using `Run` - `Rebuild Project` works
   * then make any change (e.g. alter a fixed string)
-  * use `Run` - `Make Project` fails with this error:
+  * use `Run` - `Make Project` fails with the error shown below
+    * note: using `Run` - `Rebuild Project` works (but takes very long time)
 
 Messages Gradle Build:
 ```
