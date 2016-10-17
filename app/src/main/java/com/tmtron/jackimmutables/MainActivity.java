@@ -22,7 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Click
     public void buttonClicked() {
-        textView.setText("button clicked");
+        /* when Immutables is used the jack-compilation takes about 1 minute
+         * even when I only make a small change (e.g. change the data-text), I must rebuild the
+         * whole project
+         * Run will fail with an error.
+         */
+        SimpleData immutableData = ImmutableSimpleData.builder().data("button Clicked").build();
+        textView.setText(immutableData.data());
     }
 
 
